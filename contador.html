@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Arquivos CSS -->
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Qatar 2022</title>
+</head>
+
+<body>
+    <div style="text-align: center; display: flex;" id="countdowntimer">
+        <div style="width:25%;">
+            <div class="countdowntimer" id="countdowntimerdagen">211</div>
+            <div style="width:100%;">days</div>
+        </div>
+        <div style="width:25%;">
+            <div class="countdowntimer" id="countdowntimeruren">12</div>
+            <div style="width:100%;">hours</div>
+        </div>
+        <div style="width:25%;">
+            <div class="countdowntimer" id="countdowntimerminuten">33</div>
+            <div style="width:100%;">minutes</div>
+        </div>
+        <div style="width:25%;">
+            <div class="countdowntimer" id="countdowntimerseconden">48</div>
+            <div style="width:100%;">seconds</div>
+        </div>
+    </div>
+
+    <script>if (document.getElementById("countdowntimer") !== null) { var datumeind = new Date("Nov 21, 2022 10:00:00").getTime(); var x = setInterval(function () { var datumvandaag = new Date().getTime(); var tijdsverschil = datumeind - datumvandaag; var dagen = Math.floor(tijdsverschil / (1000 * 60 * 60 * 24)); var uren = Math.floor((tijdsverschil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var minuten = Math.floor((tijdsverschil % (1000 * 60 * 60)) / (1000 * 60)); var seconden = Math.floor((tijdsverschil % (1000 * 60)) / 1000); document.getElementById("countdowntimerdagen").innerHTML = dagen; document.getElementById("countdowntimeruren").innerHTML = uren; document.getElementById("countdowntimerminuten").innerHTML = minuten; document.getElementById("countdowntimerseconden").innerHTML = seconden; if (tijdsverschil > 0) { document.getElementById("countdowntimer").style.display = "flex"; } }, 1000); }</script>
+
+</body>
+
+</html>
